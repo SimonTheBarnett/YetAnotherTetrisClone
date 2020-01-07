@@ -1,0 +1,121 @@
+/* Main styles */
+html {
+    box-sizing: border-box;
+    font: 16px sans-serif;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  .tetris {
+    padding: 8px;
+    margin: 0 auto;
+    width: 500px;
+  }
+  
+  .tetris-board {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tetris-board__info {
+    width: 100px;
+  }
+  
+  .tetris-board__text {
+    font-size: 20px;
+    color: #111;
+    margin-right: 20px;
+    width: auto;
+  }
+  
+  .tetris-board__row {
+    display: flex;
+  }
+  
+  /* Styles for tiles */
+  [class*=col-] {
+    padding: 16px;
+    border: 2px solid #363636;
+  }
+  
+  /* Default (empty) board column */
+  .col-0 {
+    background-color: #020202;
+  }
+  
+  /* Colors for tiles */
+  .col-1 {
+    background-color: #f21620;
+  }
+  
+  .col-2 {
+    background-color: #10ac84;
+  }
+  
+  .col-3 {
+    background-color: #5f27cd;
+  }
+  
+  .col-4 {
+    background-color: #d925cf;
+  }
+  
+  .col-5 {
+    background-color: #48dbfb;
+  }
+  
+  .col-6 {
+    background-color: #fd4964;
+  }
+  
+  .col-7 {
+    background-color: #72fa4e;
+  }
+  
+  /* Styles for buttons */
+  .tetris__block-controls,
+  .tetris__game-controls {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    margin-left: 180px;
+  }
+  
+  .tetris__game-controls {
+    margin-bottom: 16px;
+  }
+  
+  .btn {
+    padding: 12px 21px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #A3A3A3;
+    border: 0;
+    cursor: pointer;
+    transition: background-color .25s ease-in;
+  }
+  
+  .btn:hover {
+    background-color: #565656;
+  }
+  
+  .tetris__block-controls .btn:first-child,
+  .tetris__game-controls .btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  
+  .tetris__block-controls .btn:not(:first-child),
+  .tetris__game-controls .btn:not(:first-child) {
+    border-left: 1px solid #000000;
+  }
+  
+  .tetris__block-controls .btn:last-child,
+  .tetris__game-controls .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
